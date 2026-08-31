@@ -3,7 +3,7 @@
 }
 
 :root {
-    --bg: #e8f1fa;
+    --bg: #e7f1f9;
     --card-bg: #fff;
     --text: #222;
     --muted: #666;
@@ -123,6 +123,8 @@ summary {
     font-weight: 600;
     list-style: none;
     transition: opacity 0.2s;
+    display: inline-block;
+    width: fit-content;
 }
 
 summary:hover {
@@ -156,10 +158,18 @@ details[open] summary::before {
     color: inherit;
     position: relative;
     padding-left: 18px;
+    font-size: 18px;
+    transition: opacity 0.2s;
+    display: inline-block;
+    width: fit-content;
 }
 
 .week-content a::before {
     content: "•";
     position: absolute;
     left: 0;
+}
+
+.week-content a:hover {
+    opacity: 0.6;
 }
