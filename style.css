@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-:root {
+:root { 
     --bg: #eef1f5;
     --text: #222;
     --muted: #666;
