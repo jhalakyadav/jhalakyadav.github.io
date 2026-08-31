@@ -2,16 +2,18 @@
     box-sizing: border-box;
 }
 
-:root { 
-    --bg: #eef1f5;
+:root {
+    --bg: #e8f1fa;
+    --card-bg: #fff;
     --text: #222;
     --muted: #666;
     --border: #eee;
 }
 
 [data-theme="dark"] {
-    --bg: #121212;
-    --text: #e8e8e8;
+    --bg: #0b1d36;
+    --card-bg: #16294a;
+    --text: #f9f5f5;
     --muted: #999;
     --border: #333;
 }
@@ -22,6 +24,16 @@ body {
     color: var(--text);
     background: var(--bg);
     transition: background 0.2s, color 0.2s;
+    padding: 40px 20px;
+}
+
+.page-card {
+    max-width: 1160px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05);
+    padding: 20px 0 60px;
 }
 
 header {
@@ -86,7 +98,7 @@ h1 {
 
 .course-info {
     display: flex;
-    gap: 188px;
+    gap: 175px;
     color: var(--muted);
     font-weight: 600;
 }
@@ -142,4 +154,12 @@ details[open] summary::before {
 
 .week-content a {
     color: inherit;
+    position: relative;
+    padding-left: 18px;
+}
+
+.week-content a::before {
+    content: "•";
+    position: absolute;
+    left: 0;
 }
