@@ -1,5 +1,3 @@
-// InClass-Exercise 2 — Nachbau des LaTeX-Originals (article, 10pt, A4)
-
 #let title = "Übungsaufgaben zu Rekursion"
 #let course = ""
 #let date = "Oktober 2026"
@@ -111,15 +109,18 @@ Beachten Sie:
 #list(
   indent: 1em,
   spacing: 1.1em,
-  [Jede geschweifte Klammer `{ }` muss geschlossen sein.],
-  [Andere Klammern [`(`,`)`,`<`,`>`] dürfen nicht auftreten.],
+  [Jede öffnende Klammer `{` muss später geschlossen werden, und jede schließende Klammer `}` muss zu einer zuvor geöffneten `{` gehören.],
+  [Kommt eines der Zeichen `(`, `)`, `[`, `]`, `<`, `>` vor, ist das Ergebnis `false`.],
   [Andere Zeichen dürfen ignoriert werden.],
 )
 #v(0.4em)
 
 Beispiele:\
+`""` #to `true`\
 `"{}"` #to `true`\
 `"{{}}"` #to `true`\
-`"({a})"` #to `false`\
 `"{a{}}"` #to `true`\
+`"({a})"` #to `false`\
+`"}{"` #to `false`\
+`"{"` #to `false`\
 #hint[Verwenden Sie eine Hilfsmethode.]
