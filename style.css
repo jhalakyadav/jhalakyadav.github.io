@@ -8,6 +8,12 @@
     --text: #222;
     --muted: #666;
     --border: #eee;
+    --notice-bg: rgba(220, 38, 38, 0.08);
+    --notice-border: #dc2626;
+    --notice-text: #b91c1c;
+    --notice-bg: rgba(248, 113, 113, 0.15);
+    --notice-border: #e30e0e;
+    --notice-text: #e30e0e;
 }
 
 [data-theme="dark"] {
@@ -178,4 +184,16 @@ details[open] summary::before {
     margin: 20px 0 0 35px;
     font-size: 19px;
     color: inherit;
+}
+
+.notice {
+    background: var(--notice-bg);
+    border: 1px solid var(--notice-border);
+    color: var(--notice-text);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 20px 0 0 35px;
+    width: fit-content;
 }
