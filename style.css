@@ -173,3 +173,9 @@ details[open] summary::before {
 .week-content a:hover {
     opacity: 0.6;
 }
+
+.week-topics {
+    margin: 20px 0 0 35px;
+    font-size: 19px;
+    color: inherit;
+}
